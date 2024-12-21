@@ -165,4 +165,4 @@ export const createAdmin = [
 
 
 
-export const base_url = "http://localhost:5000/api/";
+export const base_url = "https://gamershub-server.vercel.app/api/";
