@@ -4,8 +4,10 @@ import { IoIosClose } from "react-icons/io";
 import axios from 'axios';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import { base_url } from './common/config';
 
-function ImageUpload({ imageFile, setImageFile, uploadedImageUrl, setUploadedImageUrl, imgLoadingState, setImgLoadingState, formData, currentEditId,schemaType, isCurrentStyling }) {
+
+function ImageUpload({ imageFile, setImageFile, uploadedImageUrl, setUploadedImageUrl, imgLoadingState, setImgLoadingState, formData, currentEditId, schemaType, isCurrentStyling }) {
 
     const inputRef = useRef(null)
 
@@ -35,7 +37,7 @@ function ImageUpload({ imageFile, setImageFile, uploadedImageUrl, setUploadedIma
         setImgLoadingState(true)
         const data = new FormData()
         data.append('my_file', imageFile)
-        const response = await axios.post('http://localhost:5000/api/admin/product/upload-image', data)
+        const response = await axios.post(`${base_url}admin/product/upload-image`, data)
         if (response?.data.success) {
             setUploadedImageUrl({ url: response.data.result.url, public_id: response.data.result.public_id })
             setImgLoadingState(false)
@@ -43,7 +45,7 @@ function ImageUpload({ imageFile, setImageFile, uploadedImageUrl, setUploadedIma
     }
 
     async function handleImageDelete(publicId, itemId, schemaType) {
-        const response = await axios.delete('http://localhost:5000/api/admin/product/delete-image', {
+        const response = await axios.delete(`${base_url}admin/product/delete-image`, {
             data: { public_id: publicId, itemId, schemaType }
         });
 
@@ -60,7 +62,7 @@ function ImageUpload({ imageFile, setImageFile, uploadedImageUrl, setUploadedIma
     }, [imageFile])
 
     return (
-        <div className={`w-full mt-4 ${isCurrentStyling?'':'max-w-md mx-auto'}`}>
+        <div className={`w-full mt-4 ${isCurrentStyling ? '' : 'max-w-md mx-auto'}`}>
             <label className='mb-3 font-semibold block' htmlFor="">Upload Image</label>
             <div onDragOver={handleDragOver} onDrop={handleDrop} className='border-2 border-dashed rounded-lg p-4'>
                 <input className='hidden' id='image-upload' type='file' ref={inputRef} onChange={handleImageFile} />
