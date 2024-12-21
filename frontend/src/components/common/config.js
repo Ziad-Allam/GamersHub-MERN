@@ -105,4 +105,4 @@ export const loginFormControls=[
     },
 ]
 
-export const base_url = "http://localhost:5000/api/";
+export const base_url = "gamershub-server.vercel.app/api/";
