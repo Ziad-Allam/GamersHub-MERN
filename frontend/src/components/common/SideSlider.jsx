@@ -5,7 +5,7 @@ import useClickOutside from '../../hooks/useClickOutside'
 function SideSlider({ isPanelOpen, setIsPanelOpen, children, title }) {
 
     let sidePanelRef = useClickOutside(() => {
-        setOpenNavItems(false)
+        setIsPanelOpen(false)
     })
 
     return (
