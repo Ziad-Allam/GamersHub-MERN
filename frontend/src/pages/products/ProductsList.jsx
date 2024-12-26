@@ -7,7 +7,7 @@ import { FiFilter } from "react-icons/fi";
 import ProductListingHeader from '../../components/products/ProductListingHeader'
 import MobileProductFilter from '../../components/mobile/MobileProductFilter'
 import ProductsSideFilter from '../../components/products/ProductsSideFilter'
-import SideSlider from '../../components/SideSlider'
+import SideSlider from '../../components/common/SideSlider'
 function ProductsList() {
 
     const dispatch = useDispatch()
