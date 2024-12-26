@@ -98,7 +98,7 @@ function ProductsList() {
 
             </div>
 
-            <SideSlider isPanelOpen={isFilterPanelOpen} setIsPanelOpen={setIsFilterPanelOpen}>
+            <SideSlider isPanelOpen={isFilterPanelOpen} setIsPanelOpen={setIsFilterPanelOpen} title='Filter'>
                 <MobileProductFilter filters={filters} handleFilter={handleFilter} />
             </SideSlider>
         </>
