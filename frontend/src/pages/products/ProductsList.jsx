@@ -7,7 +7,7 @@ import { FiFilter } from "react-icons/fi";
 import ProductListingHeader from '../../components/products/ProductListingHeader'
 import MobileProductFilter from '../../components/mobile/MobileProductFilter'
 import ProductsSideFilter from '../../components/products/ProductsSideFilter'
-import SidePanel from '../../components/common/SidePanel'
+import SideSlider from '../../components/common/SideSlider'
 
 function ProductsList() {
 
@@ -99,11 +99,13 @@ function ProductsList() {
 
             </div>
 
-            <SidePanel isPanelOpen={isFilterPanelOpen} setIsPanelOpen={setIsFilterPanelOpen}>
+            <SideSlider isPanelOpen={isFilterPanelOpen} setIsPanelOpen={setIsFilterPanelOpen}>
                 <MobileProductFilter filters={filters} handleFilter={handleFilter} />
-            </SidePanel>
+            </SideSlider>
         </>
     )
 }
+
+
 
 export default ProductsList
