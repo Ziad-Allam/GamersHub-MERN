@@ -7,7 +7,7 @@ import { FiFilter } from "react-icons/fi";
 import ProductListingHeader from '../../components/products/ProductListingHeader'
 import MobileProductFilter from '../../components/mobile/MobileProductFilter'
 import ProductsSideFilter from '../../components/products/ProductsSideFilter'
-import SidePanel from '../../components/common/sidePanel'
+import SidePanel from '../../components/common/SidePanel'
 
 function ProductsList() {
 
