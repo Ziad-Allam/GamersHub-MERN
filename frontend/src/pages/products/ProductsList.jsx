@@ -7,6 +7,7 @@ import { FiFilter } from "react-icons/fi";
 import ProductListingHeader from '../../components/products/ProductListingHeader'
 import MobileProductFilter from '../../components/mobile/MobileProductFilter'
 import ProductsSideFilter from '../../components/products/ProductsSideFilter'
+import SidePanel from '../../components/common/sidePanel'
 
 function ProductsList() {
 
@@ -17,7 +18,7 @@ function ProductsList() {
 
     const [filters, setFilters] = useState({})
     const [searchParams, setSearchParams] = useSearchParams()
-    const [openNavItems, setOpenNavItems] = useState(false)
+    const [isFilterPanelOpen, setIsFilterPanelOpen] = useState(false)
 
     function handleFilter(main, optionId) {
         let copyFilters = { ...filters }
@@ -86,7 +87,7 @@ function ProductsList() {
                     </div>
 
                     <div className='lg:hidden'>
-                        <button onClick={() => { setOpenNavItems(true) }} className='fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-3 py-2 rounded-md shadow-md focus:outline-none z-40'>
+                        <button onClick={() => { setIsFilterPanelOpen(true) }} className='fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-3 py-2 rounded-md shadow-md focus:outline-none z-40'>
                             <div className='flex items-center gap-1 text-sm'>
                                 <span>Filter</span>
                                 <FiFilter />
@@ -98,7 +99,9 @@ function ProductsList() {
 
             </div>
 
-            <MobileProductFilter filters={filters} handleFilter={handleFilter} openNavItems={openNavItems} setOpenNavItems={setOpenNavItems} />
+            <SidePanel isPanelOpen={isFilterPanelOpen} setIsPanelOpen={setIsFilterPanelOpen}>
+                <MobileProductFilter filters={filters} handleFilter={handleFilter} />
+            </SidePanel>
         </>
     )
 }
