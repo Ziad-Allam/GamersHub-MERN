@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { allCategories } from '../../features/categories/categoriesSlice'
 import { allBrands } from '../../features/brands/brandsSlice'
-import { IoIosClose } from 'react-icons/io'
 
-function MobileProductFilter({ filters, handleFilter, openNavItems, setOpenNavItems }) {
+function MobileProductFilter({ filters, handleFilter }) {
 
     const dispatch = useDispatch()
 
@@ -19,17 +17,17 @@ function MobileProductFilter({ filters, handleFilter, openNavItems, setOpenNavIt
 
     return (
 
-        <div className={`fixed z-50 inset-0 bg-black bg-opacity-80 transition-opacity ${openNavItems ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+        // <div className={`fixed z-50 inset-0 bg-black bg-opacity-80 transition-opacity ${openNavItems ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
 
-            <div className={`fixed top-0 left-0 w-full max-w-80 h-full bg-white overflow-y-auto transition-transform ${openNavItems ? 'translate-y-0' : 'translate-y-full'}`}>
+        //     <div className={`fixed top-0 left-0 w-full max-w-80 h-full bg-white overflow-y-auto transition-transform ${openNavItems ? 'translate-y-0' : 'translate-y-full'}`}>
 
-                <div className='p-4 mt-4'>
-                    <div className='flex justify-between items-center mb-4'>
-                        <h1 className='text-xl font-bold text-blue-500'>Filters</h1>
-                        <button onClick={() => { setOpenNavItems(false) }} className='text-2xl'>
-                            <IoIosClose size={28} />
-                        </button>
-                    </div>
+        //         <div className='p-4 mt-4'>
+        //             <div className='flex justify-between items-center mb-4'>
+        //                 <h1 className='text-xl font-bold text-blue-500'>Filters</h1>
+        //                 <button onClick={() => { setOpenNavItems(false) }} className='text-2xl'>
+        //                     <IoIosClose size={28} />
+        //                 </button>
+        //             </div>
                     <div className='rounded-lg shadow-sm'>
                         <div className='p-4 space-y-4'>
                             <div className='flex flex-col gap-4'>
@@ -77,11 +75,11 @@ function MobileProductFilter({ filters, handleFilter, openNavItems, setOpenNavIt
                             </div>
                         </div>
                     </div>
-                </div>
+        //         </div>
 
-            </div>
+        //     </div>
 
-        </div>
+        // </div>
 
     )
 }
