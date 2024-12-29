@@ -26,15 +26,13 @@ import ScrollToTop from "./utils/scrollToTop"
 
 function App() {
 
-  const { isAuthenticated, user, isLoading } = useSelector(state => state.auth)
+  const { isAuthenticated, user } = useSelector(state => state.auth)
 
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(checkAuth())
   }, [dispatch])
-
-  if (isLoading) return <div>Loading...</div>
 
   return (
     <div className='bg-white'>
