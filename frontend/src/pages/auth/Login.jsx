@@ -48,7 +48,7 @@ function Login() {
                 <span className='font-medium'>
                     Don't have an account?
                 </span>
-                    <Link className="ml-2 text-blue-500 hover:underline" to="/auth/register">
+                    <Link className="ml-2 text-blue-500 hover:underline" to="/register">
                         Create account
                     </Link>
                 </p>

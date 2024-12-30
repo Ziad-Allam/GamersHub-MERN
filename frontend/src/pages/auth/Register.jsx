@@ -51,7 +51,7 @@ function Register() {
                     <span className='font-medium'>
                     Already have an account?
                     </span>
-                    <Link className="font-medium ml-2 text-primary hover:underline text-blue-500" to="/auth/login">
+                    <Link className="font-medium ml-2 text-primary hover:underline text-blue-500" to="/login">
                         Login
                     </Link>
                 </p>
