@@ -27,7 +27,7 @@ export default function Loading({ repeat, type }) {
             <ThreeDot color="#32cd32" size="medium" text="" textColor="" />
         </div>
     )
-    const bannar = () => (
+    const Bannar = () => (
         <div className='flex items-center justify-center w-full h-64 sm:h-80 md:h-[438px] object-cover bg-gray-200'>
             <ThreeDot color="#32cd32" size="medium" text="" textColor="" />
         </div>
@@ -36,5 +36,5 @@ export default function Loading({ repeat, type }) {
     if (type === "productCard") return Array(repeat).fill(<ProductCardLoading />);
     if (type === "categories") return Array(repeat).fill(<Categories />);
     if (type === "productCardSlider") return Array(repeat).fill(<ProductCardSlider />);
-    if (type === "bannar") return Array(repeat).fill(<BannarLoading />);
+    if (type === "bannar") return Array(repeat).fill(<Bannar />);
 }
