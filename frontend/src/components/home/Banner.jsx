@@ -24,7 +24,7 @@ function Banner() {
   return (
     <>
       {isLoading ?
-        <Loading type='bannarLoading' />
+        <Loading type='bannar' />
         :
 
         <Swiper
