@@ -8,11 +8,14 @@ import ProductListingHeader from '../../components/products/ProductListingHeader
 import MobileProductFilter from '../../components/mobile/MobileProductFilter'
 import ProductsSideFilter from '../../components/products/ProductsSideFilter'
 import SideSlider from '../../components/common/SideSlider'
+import Loading from '../../components/loading/Loading'
 function ProductsList() {
 
     const dispatch = useDispatch()
 
     const { filteredProducts } = useSelector((state) => state.products.productList)
+    const { isLoading } = useSelector((state) => state.products)
+
     const sort = useSelector((state) => state.sort.sort); // Access sort state from Redux
 
     const [filters, setFilters] = useState({})
@@ -79,9 +82,12 @@ function ProductsList() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-4">
                         {
-                            filteredProducts?.map(productList =>
-                                <ProductCard key={productList?._id} product={productList} />
-                            )
+                            isLoading ?
+                                <Loading repeat={15} type="productCard" />
+                                :
+                                filteredProducts?.map(productList =>
+                                    <ProductCard key={productList?._id} product={productList} />
+                                )
                         }
                     </div>
 
