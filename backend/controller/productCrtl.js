@@ -54,7 +54,7 @@ const getProducts = async (req, res) => {
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: "Error occured",
+            message: error.message,
         });
     }
 
@@ -106,7 +106,7 @@ const getProductsByCategory = async (req, res) => {
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: "Error occured",
+            message: error.message,
         });
     }
 }
@@ -157,7 +157,7 @@ const getProductsByBrand = async (req, res) => {
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: "Error occured",
+            message: error.message,
         });
     }
 
@@ -181,7 +181,7 @@ const getProductDetails = async (req, res) => {
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: "Error occured",
+            message: error.message,
         });
     }
 

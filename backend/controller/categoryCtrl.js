@@ -14,7 +14,7 @@ const getCategories = async (req, res, next) => {
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: "Error occured",
+            message: error.message,
         });
     }
 }
@@ -38,7 +38,7 @@ const getCategoryById = async (req, res, next) => {
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: "Error occured",
+            message: error.message,
         });
     }
 }

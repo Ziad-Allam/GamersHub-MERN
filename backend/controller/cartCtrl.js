@@ -47,7 +47,7 @@ const addToCart = async (req, res) => {
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: error
+            message: error.message
         })
     }
 }
@@ -105,7 +105,7 @@ const getCartitems = async (req, res) => {
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: error
+            message: error.message
         })
     }
 }
@@ -172,7 +172,7 @@ const updateCartItemQuantity = async (req, res) => {
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: error
+            message: error.message
         })
     }
 }
@@ -230,7 +230,7 @@ const deleteCartitem = async (req, res) => {
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: error
+            message: error.message
         })
     }
 }

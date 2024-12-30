@@ -14,7 +14,7 @@ const getBanneres = async (req, res) => {
     } catch (e) {
         res.status(500).json({
             success: false,
-            message: 'Error occured'
+            message: e.message
         })
     }
 }

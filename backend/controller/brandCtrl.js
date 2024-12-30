@@ -14,7 +14,7 @@ const getBrands = async (req, res, next) => {
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: "Error occured",
+            message: error.message,
         });
     }
 }
