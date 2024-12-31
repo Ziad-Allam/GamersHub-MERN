@@ -27,7 +27,7 @@ function ProductDetailsActionBtns({ productDetails }) {
             {productDetails?.totalStock === 0 ?
                 <button className='rounded-md bg-gray-500 h-12 text-lg text-white w-full opacity-60 cursor-not-allowed'>Out of Stock</button>
                 :
-                <button onClick={() => handleAddToCart(productDetails?._id, productDetails.totalStock)} className='rounded-md bg-orange-400 hover:bg-orange-500 h-12 text-lg font-medium text-black flex-1 flex items-center justify-center gap-2'>
+                <button onClick={() => handleAddToCart(productDetails?._id, productDetails.totalStock)} className='rounded-md bg-amber-300 hover:bg-amber-400 h-12 text-lg font-medium text-black flex-1 flex items-center justify-center gap-2'>
                     <MdOutlineShoppingCart size={20} />
                     Add to Cart
                 </button>
