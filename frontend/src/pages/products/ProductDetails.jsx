@@ -30,13 +30,15 @@ function ProductDetails() {
 
     return (
         <>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-4">
-                <div className='lg:col-span-2'>
-                    <div className='w-full bg-red-300'>
-                        <img src={productDetails?.image?.url} alt="" className='w-full object-cover' />
-                    </div>
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-14 py-4">
+                <div className="lg:col-span-2 w-full ">
+                    <img
+                        src={productDetails?.image?.url}
+                        alt={productDetails?.description || 'Product Image'}
+                        className="w-full object-cover rounded-lg shadow-lg"
+                    />
                 </div>
-                <div className='flex flex-col gap-4'>
+                <div className='lg:col-span-2 flex flex-col gap-6'>
                     <Link to={`/shop/brands/${productDetails?.brand?.slug}/${productDetails?.brand?._id}`}>
                         <p className='uppercase hover:underline font-semibold text-blue-500'>{productDetails?.brand?.title}</p>
                     </Link>
@@ -55,6 +57,10 @@ function ProductDetails() {
 
                     <ProductDetailsActionBtns productDetails={productDetails} />
                 </div>
+                <div className="lg:col-span-1 flex flex-col gap-6">
+                    some info
+                </div>
+
             </div>
 
             <ReviewsSection />
