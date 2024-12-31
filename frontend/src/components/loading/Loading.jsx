@@ -17,19 +17,19 @@ export default function Loading({ repeat, type }) {
         </div>
     )
     const Categories = () => (
-        <div className='flex items-center justify-center h-32 bg-gray-200'>
-            <ThreeDot color="#32cd32" size="medium" text="" textColor="" />
+        <div className='flex items-center justify-center h-32 '>
+            <ThreeDot color="#32cd32" size="small" />
         </div>
     )
 
     const ProductCardSlider = () => (
         <div className='flex items-center justify-center bg-gray-200 h-96 mb-4'>
-            <ThreeDot color="#32cd32" size="medium" text="" textColor="" />
+            <ThreeDot color="#32cd32" size="medium"  />
         </div>
     )
     const Bannar = () => (
         <div className='flex items-center justify-center w-full h-64 sm:h-80 md:h-[438px] object-cover bg-gray-200'>
-            <ThreeDot color="#32cd32" size="medium" text="" textColor="" />
+            <ThreeDot color="#32cd32" size="medium" />
         </div>
     )
 
