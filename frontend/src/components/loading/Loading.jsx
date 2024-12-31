@@ -33,8 +33,9 @@ export default function Loading({ repeat, type }) {
         </div>
     )
     const SpinnerLoading = () => (
-        <div className={`fixed z-50 inset-0 bg-gray-200 bg-opacity-80 transition-opacity`}>
-            <OrbitProgress color="#111114" size="small" /></div>
+        <div className='fixed z-50 inset-0 bg-gray-200 bg-opacity-80 transition-opacity flex items-center justify-center'>
+            <OrbitProgress color="#111114" size="small" />
+            </div>
     )
 
     if (type === "productCard") return Array(repeat).fill(<ProductCardLoading />);
