@@ -14,7 +14,7 @@ function Banner() {
 
   const dispatch = useDispatch()
 
-  const images = useSelector((state) => state.banner.bannarImage.images);
+  const images = useSelector((state) => state.banner.bannarImage?.images);
   const { isLoading } = useSelector((state) => state.banner);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ function Banner() {
           className="mySwiper">
 
           {
-            images && images.length > 0 ?
+            images && images?.length > 0 ?
               images.map(bannarImage => (
                 <SwiperSlide key={bannarImage?._id}>
                   <img src={bannarImage.image.url} alt="" className='w-full h-64 sm:h-80 md:h-full object-cover' />
