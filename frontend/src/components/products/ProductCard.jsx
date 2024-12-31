@@ -58,7 +58,7 @@ function ProductCard({ product }) {
 
         </div>
       </Link>
-      <button onClick={() => handleAddToCart(product?._id, product.totalStock)} className='bg-orange-400 hover:bg-orange-300 w-full py-2 rounded-md font-medium flex items-center justify-center gap-2'>
+      <button onClick={() => handleAddToCart(product?._id, product.totalStock)} className='bg-amber-300 hover:bg-amber-400 w-full py-2 rounded-md font-medium flex items-center justify-center gap-2'>
         <MdOutlineShoppingCart size={20} />
         <p>Add to cart</p>
       </button>
