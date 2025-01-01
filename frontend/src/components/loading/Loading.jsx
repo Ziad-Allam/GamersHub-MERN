@@ -37,7 +37,7 @@ export default function Loading({ repeat, type }) {
         </div>
     )
     const NavLoading = () => (
-            <Skeleton className='h-3 w-full' />
+            <Skeleton className='py-3 w-full' />
     )
 
     if (type === "productCard") return Array(repeat).fill(<ProductCardLoading />);
