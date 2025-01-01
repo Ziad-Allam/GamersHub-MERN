@@ -32,7 +32,7 @@ function Categories() {
                                         <div className='w-16 h-16 sm:w-24 sm:h-24 relative'>
                                             <img src={category?.image.url} alt="" className=' object-cover' />
                                         </div>
-                                        <p className='capitalize text-xs sm:text-base font-semibold'>{category?.title}</p>
+                                        <p className='capitalize text-xs sm:text-base font-semibold text-center'>{category?.title}</p>
                                     </div>
                                 </Link>
                             </SwiperSlide>

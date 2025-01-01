@@ -14,27 +14,6 @@ export const getBannerImages = createAsyncThunk('/banner/getBannerImages',
     }
 )
 
-// export const editBrand = createAsyncThunk('/products/editBrand',
-//     async ({id,formData}) => {
-//         const response = await axios.put(`${base_url}brand/edit/${id}`, formData, {
-//             headers: {
-//                 'Content-Type': 'application/json',
-//             }
-//         });
-//         return response.data
-//     }
-// )
-
-// export const deleteBrand = createAsyncThunk('/products/deleteBrand',
-//     async (id) => {
-//         const response = await axios.delete(`${base_url}brand/delete/${id}`);
-//         console.log(response);
-//         return response.data 
-        
-//     }
-// )
-
-
 export const authSlice = createSlice({
     name: "banner",
     initialState,

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Banner from '../components/home/Banner'
 import { allCategories } from '../features/categories/categoriesSlice'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { getAllProducts } from '../features/products/productsSlice'
 import Categories from '../components/home/Categories'
 import FeaturedProducts from '../components/home/FeaturedProducts'
@@ -13,8 +13,6 @@ import 'swiper/css/pagination';
 function Home() {
 
     const dispatch = useDispatch()
-    const { categoryList } = useSelector((state) => state.categories)
-    const { filteredProducts } = useSelector((state) => state.products.productList)
 
     useEffect(() => {
         dispatch(allCategories())
@@ -27,8 +25,8 @@ function Home() {
     return (
         <div>
             <Banner />
-            <Categories categoryList={categoryList} />
-            <FeaturedProducts categoryList={categoryList} productList={filteredProducts} />
+            <Categories />
+            <FeaturedProducts/>
         </div>
     )
 }
