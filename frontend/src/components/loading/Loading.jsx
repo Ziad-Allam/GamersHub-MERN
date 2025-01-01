@@ -6,7 +6,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 export default function Loading({ repeat, type }) {
     const ProductCardLoading = () => (
         <div className='w-full border border-gray-300 p-2 rounded-md'>
-            <Skeleton className='h-[300px]' />
+            <Skeleton className='h-[250px]' />
             <div className='py-2 flex flex-grow flex-col gap-2'>
                 <div className='h-10'>
                     <Skeleton count={2} />

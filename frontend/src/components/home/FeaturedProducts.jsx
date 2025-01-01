@@ -27,14 +27,14 @@ function FeaturedProducts() {
                                 </button>
                             </div>
                             <Swiper
-                                slidesPerView={1.2}
-                                spaceBetween={20}
+                                slidesPerView={1.5}
+                                spaceBetween={12}
                                 className="mySwiper"
                                 breakpoints={{
-                                    500: { slidesPerView: 2.5, spaceBetween: 15 },
-                                    800: { slidesPerView: 3.5, spaceBetween: 15 },
-                                    1024: { slidesPerView: 4.5, spaceBetween: 20 },
-                                    1290: { slidesPerView: 5, spaceBetween: 20 },
+                                    500: { slidesPerView: 2.5, spaceBetween: 12 },
+                                    800: { slidesPerView: 3.5, spaceBetween: 12 },
+                                    1024: { slidesPerView: 4.5, spaceBetween: 12 },
+                                    1290: { slidesPerView: 6, spaceBetween: 12 },
                                 }}>
                                 {
                                     filteredProducts

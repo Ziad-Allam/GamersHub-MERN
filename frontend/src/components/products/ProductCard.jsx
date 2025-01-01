@@ -30,8 +30,8 @@ function ProductCard({ product }) {
       </button>
 
       <Link to={`/product-details/${product?._id}`} >
-        <div className=''>
-          <img src={product?.image?.url} alt={product.title} className='w-full h-[300px] object-cover' />
+        <div >
+          <img src={product?.image?.url} alt={product.title} className='w-full object-cover' />
         </div>
 
         <div className='p-2 flex flex-grow flex-col gap-2'>
@@ -58,8 +58,8 @@ function ProductCard({ product }) {
 
         </div>
       </Link>
-      <button onClick={() => handleAddToCart(product?._id, product.totalStock)} className='bg-amber-300 hover:bg-amber-400 w-full py-2 rounded-md font-medium flex items-center justify-center gap-2'>
-        <MdOutlineShoppingCart size={20} />
+      <button onClick={() => handleAddToCart(product?._id, product.totalStock)} className='bg-amber-300 hover:bg-amber-400 w-full py-2 rounded-md font-medium flex items-center justify-center gap-2 text-sm'>
+        <MdOutlineShoppingCart size={17} />
         <p>Add to cart</p>
       </button>
 
