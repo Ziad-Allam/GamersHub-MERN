@@ -21,7 +21,6 @@ export default function Loading({ repeat, type }) {
             <ThreeDot color="#111114" size="small" />
         </div>
     )
-
     const ProductCardSlider = () => (
         <div className='flex items-center justify-center bg-gray-200 h-96 mb-4'>
             <ThreeDot color="#111114" size="small" />
@@ -35,7 +34,10 @@ export default function Loading({ repeat, type }) {
     const SpinnerLoading = () => (
         <div className='fixed z-50 inset-0 bg-gray-200 bg-opacity-80 transition-opacity flex items-center justify-center'>
             <OrbitProgress color="#111114" size="small" />
-            </div>
+        </div>
+    )
+    const NavLoading = () => (
+            <Skeleton className='h-3 w-full' />
     )
 
     if (type === "productCard") return Array(repeat).fill(<ProductCardLoading />);
@@ -43,4 +45,5 @@ export default function Loading({ repeat, type }) {
     if (type === "productCardSlider") return Array(repeat).fill(<ProductCardSlider />);
     if (type === "bannar") return Array(repeat).fill(<Bannar />);
     if (type === "spinnerLoading") return Array(repeat).fill(<SpinnerLoading />);
+    if (type === "navLoading") return Array(repeat).fill(<NavLoading />);
 }
