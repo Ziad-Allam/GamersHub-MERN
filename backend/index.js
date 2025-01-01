@@ -25,7 +25,9 @@ const cookieParser = require('cookie-parser')
 const cors = require("cors");
 
 mongoose.connect(process.env.CONN_STR, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 30000
 }).then((conn) => {
     console.log('DB connection successful')
 }).catch((error) => {
